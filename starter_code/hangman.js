@@ -1,39 +1,50 @@
+/*jshint esversion: 6 */
+
+
 let hangman;
 
-// class Hangman {
-//   constructor() {
+class Hangman {
+  constructor() {
+    this.words = ["javascript", "unicorn", "cupcake", "lollipop"];
+    this.secretWord= "";
+    this.letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+       'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+       't', 'u', 'v', 'w', 'x', 'y', 'z'];
 
-//   }
+    this.guessedLetter = []; //= randWord.length;
+    this.errorsLeft = 10;
+  }
 
-//   getWord() {
+  getWord(){
+     let randWord = this.words[Math.floor(Math.random() * this.words.length)];
+     return randWord;
+   }
 
-//   }
+   checkIfLetter(keyCode) {
 
-//   checkIfLetter(keyCode) {
+   }
 
-//   }
+   checkClickedLetters(key) {
 
-//   checkClickedLetters(key) {
+   }
 
-//   }
+   addCorrectLetter(i) {
 
-//   addCorrectLetter(i) {
+   }
 
-//   }
+   addWrongLetter(letter) {
 
-//   addWrongLetter(letter) {
+   }
 
-//   }
+   checkGameOver() {
 
-//   checkGameOver() {
+   }
 
-//   }
+   checkWinner() {
 
-//   checkWinner() {
+   }
 
-//   }
-
-// }
+ }
 
 document.getElementById('start-game-button').onclick = () => {
   hangman = new Hangman();
